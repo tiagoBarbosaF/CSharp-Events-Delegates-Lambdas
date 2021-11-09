@@ -18,6 +18,15 @@
 - Usando Eventos do dotNET
 - Consolidando seu conhecimento
 - O que aprendi?
+	- **Método virtual `OnSelectionChanged`:**
+		- Precisávamos alterar o comportamento da ListBox, para isto, criamos um controle especializado chamado `AgenciasListBox` e nele sobreescrevemos o método `OnSelectionChanged` para mudar seu comportamento.
+	- **O custo de criar controles customizados:**
+		- Criamos novos controles e criar controles especializados é uma relação de perda-e-ganho: alteramos seu comportamento, mas perdemos recursos do Visual Studio como o arrastar-e-soltar.
+	- **Eventos:**
+		- Criar classe especializada para cada comportamento pareceu trabalhoso e desorganizado demais! Se o objetivo é adicionar comportamento, uma melhor alternativa é utilizar Eventos!
+	- **Conhecemos eventos de alguns controles do .NET:**
+		- A `ListBox` possui um evento chamado `SelectionChanged`, emitido na mudança de seleção de item;
+		- O `Button` possui um evento chamado `Click`, emitido no clique do usuário.
 
 ### Delegates
 - Usando delegates

@@ -24,7 +24,12 @@
                 Content="Excluir" 
                 Canvas.Left="410" 
                 Canvas.Top="284" 
-                Width="85" 
+                Width="85"
                 Click="Button_Click"/>
+        <Button x:Name="btnEditar"
+                Content="Editar"
+                Canvas.Left="320"
+                Canvas.Top="284"
+                Width="85"/>
     </Canvas>
 </Window>
