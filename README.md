@@ -38,6 +38,14 @@
 - Combinando delegates
 - Consolidando seu conhecimento
 - O que aprendi?
+	- **A assinatura de delegates:**
+		- Vimos o que os delegates representam e os benefícios de ter um método fortemente tipado em nosso código quando assinamos eventos!
+	- **Construindo objetos de Delegates:**
+		- A sintaxe de criação de Delegates fortemente tipados é a mesma para qualquer outro objeto, usamos o operador `new`! Mas, o argumento do construtor do delegate fortemente tipado é uma referência para um método que respeita sua assinatura.
+	- **O operador `+=`:**
+		- Para fazer a assinatura de um evento e adicionar um comportamento quando este evento acontecer, podemos utilizar o operador `+=`!
+	- **Não podemos usar o operador `=` em eventos:**
+		- Vimos que faz sentido não poder alterar o valor de um evento com o operador `=`, mas sim adicionar comportamentos via `+=`!
 
 ### Manipulando Delegates
 - Usando delegates
