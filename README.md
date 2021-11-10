@@ -57,6 +57,16 @@
 - Combinando delegates
 - Consolidando seu conhecimento
 - O que aprendi?
+	- **Sintaxe de criação de delegates:**
+		- Vimos que poderíamos melhorar nosso fluxo de criar um método para cada delegate e aprendemos a sintaxe de métodos anônimos e expressões lambda!
+	- **A classe `Delegate` e seu método `Delegate::Combine`:**
+		- Precisamos criar um delegate responsável por alterar a propriedade `DialogResult` e outro responsável por fechar a janela de edição. Para combinar estes dois delegates, usamos a função `Delegate::Combine`.
+	- **O operador de soma entre delegates:**
+		- Aprendemos a usar a função `Delegate::Combine`, mas uma forma mais fácil de combinar é utilizando o operador de soma `+` - que, por de  baixo dos panos, é transformado na invocaçãpo da função `Combine` pelo compilador.
+	- **Todo delegate é filho do tipo Delegate!**
+		- As manipulações feitas durante o curso foram possíveis, pois no .NET, todo delegate deriva o tipo `Delegate`.
+	- **O argumento `sender`:**
+		- Podemos manipular delegates facilmente, mas, se desejamos verificar o objeto emissor de um evento, podemos usar o parâmetro `object sender`.
 
 ### Funções e nosso próprio evento
 - Usando funções
