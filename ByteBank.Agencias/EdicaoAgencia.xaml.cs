@@ -28,6 +28,14 @@ namespace ByteBank.Agencias
             _agencia = agencia ?? throw new ArgumentNullException(nameof(agencia));
             AtualizarCamporDeTexto();
             AtualizarControles();
+
+            //ValidarCampoNulo(txtNumero, EventArgs.Empty);
+            //ValidarSomenteDigito(txtNumero, EventArgs.Empty);
+
+            //ValidarCampoNulo(txtNome, EventArgs.Empty);
+            //ValidarCampoNulo(txtTelefone, EventArgs.Empty);
+            //ValidarCampoNulo(txtEndereco, EventArgs.Empty);
+            //ValidarCampoNulo(txtDescricao, EventArgs.Empty);
         }
 
         private void AtualizarCamporDeTexto()
@@ -51,22 +59,19 @@ namespace ByteBank.Agencias
             btnOk.Click += okEventHandler;
             btnCancelar.Click += cancelarEventHandler;
 
-            txtNome.TextChanged += ValidarCampoNulo;
-            txtNumero.TextChanged += ValidarCampoNulo;
-            txtTelefone.TextChanged += ValidarCampoNulo;
-            txtDescricao.TextChanged += ValidarCampoNulo;
-            txtEndereco.TextChanged += ValidarCampoNulo;
+            txtNumero.Validacao += ValidarCampoNulo;
+            txtNumero.Validacao += ValidarSomenteDigito;
+
+
+            txtNome.Validacao += ValidarCampoNulo;
+            txtTelefone.Validacao += ValidarCampoNulo;
+            txtDescricao.Validacao += ValidarCampoNulo;
+            txtEndereco.Validacao += ValidarCampoNulo;
         }
 
-        private void ValidarCampoNulo(object sender, EventArgs e)
-        {
-            var txt = sender as TextBox;
-            var textIsEmpty = String.IsNullOrEmpty(txt.Text);
+        private bool ValidarSomenteDigito(string texto) => texto.All(Char.IsDigit);
 
-            txt.Background = textIsEmpty
-                ? new SolidColorBrush(Colors.IndianRed)
-                : new SolidColorBrush(Colors.White);
-        }
+        private bool ValidarCampoNulo(string texto) => !String.IsNullOrEmpty(texto);
 
         private void TxtEndereco_TextChanged(object sender, TextChangedEventArgs e)
         {

@@ -78,6 +78,12 @@
 - Executando nossos eventos
 - Consolidando seu conhecimento
 - O que aprendi?
+	- **A sintaxe de criação de delegate:**
+		- Após usarmos **delegates** já criados no .NET, aprendemos a criar os nossos próprios delegates. Para isto, basta escrever a assinatura de um - método como já estamos acostumados e adicionar a palavra reservada `delegate`.
+	- **A sintaxe de criação de eventos:**
+		- Após usarmos **eventos** já criados no .NET, aprendemos a criar os nossos próprios eventos. Para isto, bastou definir o delegate a ser usado por  ele e então adicionar o palavra reservada `event` na criação de nosso campo.
+	- **Métodos anônimos e expressões lambda:**
+		- Aprendemos mais recursos da linguagem C# para criar facilmente delegates, como os métodos anônimos do C#2 e expressões Lambda introduzidas no C#3.
 
 ### Avançando em Eventos
 - Usando os metodos Add e Remove
