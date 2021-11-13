@@ -96,3 +96,9 @@
 - Projeto final do curso
 - Conclusão
 - O que aprendi?
+	- **Boas práticas e convenções:**
+		- Vimos práticas de nomeação de eventos, delegates usados em eventos e seus argumentos.
+	- **Como usar os métodos Add/Remove:**
+		- Equivalente aos métodos `get` e `set`, vimos que eventos possuem os métodos `add` e `remove`.
+	- **O método `GetInvocationList()`:**
+		- Foi necessário executar cada validação individualmente para pouparmos recursos computacionais de nossa máquina quando uma validação falhar e, para isto, contamos com o método `GetInvocationList()` retornando um array de delegates representando cada uma das assinaturas de nosso evento.

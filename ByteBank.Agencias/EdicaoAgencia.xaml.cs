@@ -69,58 +69,16 @@ namespace ByteBank.Agencias
             txtEndereco.Validacao += ValidarCampoNulo;
         }
 
-        private bool ValidarSomenteDigito(string texto) => texto.All(Char.IsDigit);
-
-        private bool ValidarCampoNulo(string texto) => !String.IsNullOrEmpty(texto);
-
-        private void TxtEndereco_TextChanged(object sender, TextChangedEventArgs e)
+        private void ValidarSomenteDigito(object sender, ValidacaoEventArgs e)
         {
-            var textIsEmpty = String.IsNullOrEmpty(txtEndereco.Text);
-
-            if(textIsEmpty)
-                txtEndereco.Background = new SolidColorBrush(Colors.IndianRed);
-            else
-                txtEndereco.Background = new SolidColorBrush(Colors.White);
+            var ehValido = e.Texto.All(Char.IsDigit);
+            e.EhValido = ehValido;
         }
 
-        private void TxtDescricao_TextChanged(object sender, TextChangedEventArgs e)
+        private void ValidarCampoNulo(object sender, ValidacaoEventArgs e)
         {
-            var textIsEmpty = String.IsNullOrEmpty(txtDescricao.Text);
-
-            if(textIsEmpty)
-                txtDescricao.Background = new SolidColorBrush(Colors.IndianRed);
-            else
-                txtDescricao.Background = new SolidColorBrush(Colors.White);
-        }
-
-        private void TxtTelefone_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var textIsEmpty = String.IsNullOrEmpty(txtTelefone.Text);
-
-            if(textIsEmpty)
-                txtTelefone.Background = new SolidColorBrush(Colors.IndianRed);
-            else
-                txtTelefone.Background = new SolidColorBrush(Colors.White);
-        }
-
-        private void TxtNumero_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var textIsEmpty = String.IsNullOrEmpty(txtNumero.Text);
-
-            if(textIsEmpty)
-                txtNumero.Background = new SolidColorBrush(Colors.IndianRed);
-            else
-                txtNumero.Background = new SolidColorBrush(Colors.White);
-        }
-
-        private void TxtNome_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var textIsEmpty = String.IsNullOrEmpty(txtNome.Text);
-
-            if(textIsEmpty)
-                txtNome.Background = new SolidColorBrush(Colors.IndianRed);
-            else
-                txtNome.Background = new SolidColorBrush(Colors.White);
+            var ehValido = !String.IsNullOrEmpty(e.Texto);
+            e.EhValido = ehValido;
         }
 
         private void Fechar(object sender, EventArgs e) =>
